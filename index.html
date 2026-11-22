@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NOTES VATIKA – Solved TMA for Class 10 and 12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF8FF;--surface:#FFFFFF;--ink:#1E1633;--muted:#6B6385;--pri:#6C4DF6;--peach:#FFB4A2;--line:#E8E1FA;--soft:#F3EEFF;--btn-ink:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#120E1F;--surface:#1C1631;--ink:#F1ECFF;--muted:#A99FC9;--pri:#A78BFA;--line:#2E2650;--soft:#1A1430;--btn-ink:#120E1F}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#120E1F;--surface:#1C1631;--ink:#F1ECFF;--muted:#A99FC9;--pri:#A78BFA;--line:#2E2650;--soft:#1A1430;--btn-ink:#120E1F}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Hind",system-ui,sans-serif}
+h1,h2,h3{font-family:"Outfit","Hind",system-ui,sans-serif;line-height:1.1;margin:0}
+:focus-visible{outline:3px solid var(--peach);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#5B3FE0 0%,#8B6CF6 55%,#FF9E8A 130%);border-radius:0 0 36px 36px}
+.hero::before{content:"";position:absolute;width:260px;height:260px;right:-80px;top:-60px;border-radius:50%;background:#fff;opacity:.2}
+.bar{position:relative;padding:16px 0;font:800 1.15rem "Outfit",sans-serif;letter-spacing:.06em}
+.heroin{position:relative;padding:30px 0 70px}
+.pill{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:999px;font-size:.9rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2.3rem,8vw,4.2rem);font-weight:800;max-width:14ch}
+.hero p{max-width:44ch;font-size:1.15rem;margin:16px 0 0;opacity:.95}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem "Hind",sans-serif;padding:12px 26px;border-radius:999px;background:var(--pri);color:var(--btn-ink);text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.contact .btn{background:#fff;color:#3A22B5}
+.btn.sm{padding:10px 20px;font-size:.95rem}
+.btn.ghost{background:transparent;border:2px solid var(--pri);color:var(--pri)}
+section{padding:48px 0}
+h2{font-size:clamp(1.7rem,5vw,2.3rem);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 22px}
+.offers{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:-44px;position:relative}
+.offer{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 24px 40px -30px var(--pri);display:flex;flex-direction:column;gap:12px}
+.offer .lvl{display:inline-block;align-self:flex-start;background:linear-gradient(135deg,var(--pri),var(--peach));color:#fff;border-radius:999px;padding:3px 14px;font-weight:600;font-size:.9rem}
+.offer h2{font-size:1.4rem;margin:0}
+.price{font:800 2.4rem "Outfit",sans-serif;color:var(--pri)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:.88rem}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--peach));color:#fff;font-weight:700;margin-bottom:8px}
+.steps b{display:block;font:700 1.1rem "Outfit",sans-serif}
+.how{background:var(--soft)}
+.contact{color:#fff;background:linear-gradient(135deg,#5B3FE0,#8B6CF6);border-radius:36px 36px 0 0;text-align:center}
+footer{padding:20px 0;color:var(--muted);font-size:.92rem;text-align:center}
+dialog{border:0;border-radius:22px;padding:24px;max-width:430px;width:calc(100% - 32px);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(20,10,50,.55)}
+dialog h3{margin-bottom:6px}
+dialog ol{padding-left:20px;margin:8px 0 14px;color:var(--muted);font-size:.95rem}
+dialog input{display:block;width:100%;padding:10px 12px;margin:8px 0;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+dialog .btn{margin-top:6px}
+.meta{color:var(--muted);font-size:.92rem;margin:10px 0 0}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="bar">NOTES VATIKA</div>
+    <div class="heroin">
+      <span class="pill">🌿 Solved TMA · PDF</span>
+      <h1>Class 10 and 12. All subjects.</h1>
+      <p>Complete solved TMA in one PDF for each class, at a student-friendly price.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap"><div class="offers" id="offers"></div></div>
+
+<section class="how" style="margin-top:40px">
+  <div class="wrap">
+    <h2>How to get it</h2>
+    <p class="sub">Four simple steps.</p>
+    <ol class="steps">
+      <li><b>Pay on UPI</b>Pay the bundle price using any UPI app.</li>
+      <li><b>Open our Telegram bot</b>Tap the Telegram button and press Start.</li>
+      <li><b>Send payment proof</b>Send a screenshot of your payment in the bot.</li>
+      <li><b>Get your PDF</b>We send the PDF after checking your payment.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2>Already paid?</h2>
+    <p class="sub" style="color:#fff;opacity:.9">Open our Telegram bot, press Start and send your payment screenshot.</p>
+    <a class="btn" id="tg" href="#" hidden>Open Telegram</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 NOTES VATIKA. All rights reserved.</div></footer>
+
+<dialog id="dlg"><h3 id="dT"></h3><p id="dB"></p><button class="btn sm" id="dX">Close</button></dialog>
+
+<dialog id="pay">
+  <h3 id="pT"></h3>
+  <p>Amount to pay: <b>₹<span id="pAmt"></span></b></p>
+  <ol><li>Pay on UPI.</li><li>Tap the Telegram button and press Start.</li><li>Send your payment screenshot in the bot. We send your PDF after checking the payment.</li></ol>
+  <a class="btn sm" id="pUpi" href="#">Pay with UPI app</a>
+  <p class="meta">Or pay to this UPI ID: <b id="pId"></b></p>
+  <p class="meta">Know your UTR? Add it here (optional):</p>
+  <input id="fUtr" placeholder="UTR / Transaction ID (12 digits)" inputmode="numeric" maxlength="12">
+  <button class="btn sm" id="pSend">Send on Telegram</button>
+  <button class="btn ghost sm" id="pX">Cancel</button>
+</dialog>
+
+<script>
+// ===== Edit these lines =====
+const UPI="";   // your UPI ID, e.g. "name@ybl"
+const BOT="";   // your Telegram BOT username WITHOUT @, e.g. "NotesVatikaBot"
+const BUNDLES=[
+  {id:"c10",level:"Class 10",title:"Class 10 Solved TMA – All Subjects",price:49,subjects:[]},
+  {id:"c12",level:"Class 12",title:"Class 12 Solved TMA – All Subjects",price:49,subjects:[]}
+];
+// ============================
+const $=id=>document.getElementById(id);
+const dlg=$("dlg"),pay=$("pay");
+let cur=null;
+if(BOT){$("tg").href="https://t.me/"+BOT;$("tg").hidden=false}
+function show(t,b){$("dT").textContent=t;$("dB").textContent=b;dlg.showModal()}
+BUNDLES.forEach(b=>{
+  const d=document.createElement("article");d.className="offer";
+  d.innerHTML=`<span class="lvl">${b.level}</span><h2>${b.title}</h2><div>PDF bundle · Read on any phone</div><div class="tags">${b.subjects.map(s=>`<span>${s}</span>`).join("")}</div><div class="row"><div class="price">₹${b.price}</div><button class="btn" data-id="${b.id}">Buy now</button></div>`;
+  $("offers").appendChild(d)});
+$("offers").addEventListener("click",e=>{
+  const id=e.target.dataset.id;if(!id)return;
+  cur=BUNDLES.find(x=>x.id===id);
+  if(!UPI||!BOT){show("Opening soon","Payments will open very soon. Please check back shortly.");return}
+  $("pT").textContent=cur.title;$("pAmt").textContent=cur.price;$("pId").textContent=UPI;
+  $("pUpi").href="upi://pay?pa="+encodeURIComponent(UPI)+"&pn="+encodeURIComponent("NOTES VATIKA")+"&am="+cur.price+"&cu=INR&tn="+encodeURIComponent(cur.level+" Solved TMA");
+  pay.showModal()});
+$("dX").onclick=()=>dlg.close();$("pX").onclick=()=>pay.close();
+$("pSend").onclick=()=>{
+  const u=$("fUtr").value.trim();
+  if(u&&!/^\d{12}$/.test(u)){alert("UTR must be 12 digits. Or leave it empty and send a screenshot in Telegram.");return}
+  window.open("https://t.me/"+BOT+"?start="+cur.id+(u?"_"+u:""),"_blank");
+};
+</script>
+</body>
+</html>
