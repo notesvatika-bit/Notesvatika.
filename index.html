@@ -51,7 +51,6 @@ dialog{border:0;border-radius:22px;padding:24px;max-width:430px;width:calc(100% 
 dialog::backdrop{background:rgba(20,10,50,.55)}
 dialog h3{margin-bottom:6px}
 dialog ol{padding-left:20px;margin:8px 0 14px;color:var(--muted);font-size:.95rem}
-dialog input{display:block;width:100%;padding:10px 12px;margin:8px 0;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
 dialog .btn{margin-top:6px}
 .meta{color:var(--muted);font-size:.92rem;margin:10px 0 0}
 </style>
@@ -100,11 +99,8 @@ dialog .btn{margin-top:6px}
 <dialog id="pay">
   <h3 id="pT"></h3>
   <p>Amount to pay: <b>₹<span id="pAmt"></span></b></p>
-  <ol><li>Pay on UPI.</li><li>Tap the Telegram button and press Start.</li><li>Send your payment screenshot in the bot. We send your PDF after checking the payment.</li></ol>
-  <a class="btn sm" id="pUpi" href="#">Pay with UPI app</a>
-  <p class="meta">Or pay to this UPI ID: <b id="pId"></b></p>
-  <p class="meta">Know your UTR? Add it here (optional):</p>
-  <input id="fUtr" placeholder="UTR / Transaction ID (12 digits)" inputmode="numeric" maxlength="12">
+  <ol><li>Pay the amount to the UPI ID below using any UPI app.</li><li>Tap the Telegram button and press Start.</li><li>Send your payment screenshot in the bot. We send your PDF after checking the payment.</li></ol>
+  <p class="meta">UPI ID: <b id="pId"></b></p>
   <button class="btn sm" id="pSend">Send on Telegram</button>
   <button class="btn ghost sm" id="pX">Cancel</button>
 </dialog>
@@ -132,13 +128,10 @@ $("offers").addEventListener("click",e=>{
   cur=BUNDLES.find(x=>x.id===id);
   if(!UPI||!BOT){show("Opening soon","Payments will open very soon. Please check back shortly.");return}
   $("pT").textContent=cur.title;$("pAmt").textContent=cur.price;$("pId").textContent=UPI;
-  $("pUpi").href="upi://pay?pa="+encodeURIComponent(UPI)+"&pn="+encodeURIComponent("NOTES VATIKA")+"&am="+cur.price+"&cu=INR&tn="+encodeURIComponent(cur.level+" Solved TMA");
   pay.showModal()});
 $("dX").onclick=()=>dlg.close();$("pX").onclick=()=>pay.close();
 $("pSend").onclick=()=>{
-  const u=$("fUtr").value.trim();
-  if(u&&!/^\d{12}$/.test(u)){alert("UTR must be 12 digits. Or leave it empty and send a screenshot in Telegram.");return}
-  window.open("https://t.me/"+BOT+"?start="+cur.id+(u?"_"+u:""),"_blank");
+  window.open("https://t.me/"+BOT+"?start="+cur.id,"_blank");
 };
 </script>
 </body>
